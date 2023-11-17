@@ -15,12 +15,11 @@ export class ProductFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   // When the user active the product, send a call to the app component to disable the others
   emitToggle() {
-    if (this.product.active !== false) {
+    if (this.product.active == true) {
       this.toggleActive.emit(this.product);
     }
   }

@@ -1,6 +1,7 @@
 # GreenSparkTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+To run the project Node is needed.
 
 ## Development server
 

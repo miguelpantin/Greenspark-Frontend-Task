@@ -44,21 +44,13 @@ describe('ProductFormComponent', () => {
   });
 
   it('should not emit toggleActive event when emitToggle is called and product is not active', () => {
-    const mockProduct: Product = {
-      id: 1,
-      type: 'carbon',
-      amount: 10,
-      action: 'collects',
-      active: false,
-      linked: false,
-      selectedColor: 'white'
-    };
-
-    component.product = mockProduct;
-    spyOn(component.toggleActive, 'emit');
-
-    component.emitToggle();
-
-    expect(component.toggleActive.emit).not.toHaveBeenCalled();
+    const productFormComponent = TestBed.createComponent(ProductFormComponent).componentInstance;
+    spyOn(productFormComponent.toggleActive, 'emit');
+  
+    productFormComponent.product = { active: false } as Product;
+  
+    productFormComponent.emitToggle();
+  
+    expect(productFormComponent.toggleActive.emit).not.toHaveBeenCalled();
   });
 });
