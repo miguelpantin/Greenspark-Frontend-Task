@@ -1,0 +1,23 @@
+<form #myForm="ngForm">
+    <label class="checkbox">
+        <input type="checkbox" [(ngModel)]="product.linked" name="linked" style="display: none;">  
+        <span>Link to Public Profile<span class="i"></span></span> <span class="checkbox-container"></span>
+    </label>
+
+    <div class="part-buttons">
+      <div class="colors">
+        <label>Badge colour</label>
+        <div class="colors">
+          <div class="color-square" *ngFor="let color of ['blue', 'green', 'beige', 'white', 'black']">
+            <input type="radio" [value]="color" [(ngModel)]="product.selectedColor" name="selectedColor" id="{{'color-' + color + '-' + product.id}}" >
+            <label for="{{'color-' + color + '-' + product.id}}" class="radio-label" [style.background-color]="color"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <label class="toggle">
+      <input type="checkbox" [(ngModel)]="product.active" name="active" style="display: none;" (change)="emitToggle()">  
+      <span>Active</span> <span class="toggle-container"></span>
+    </label>
+</form>

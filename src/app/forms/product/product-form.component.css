@@ -1,0 +1,126 @@
+form {
+  width: 221px; 
+}
+
+.i {
+  content: url('../../../assets/info_outline.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkbox-container::before {
+  content: url('../../../assets/checkbox/vanilla.svg');
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0; 
+}
+
+.checkbox-container:hover::before {
+  content: url('../../../assets/checkbox/hover.svg');
+  transition: content 0.3s ease;
+}
+
+input[type="checkbox"]:checked  ~ .checkbox-container::before {
+  content: url('../../../assets/checkbox/active.svg');
+  transition: content 0.3s ease;
+}
+
+.part-buttons {
+  height: 27.5px;
+  line-height: 27.5px;
+  align-items: center;
+}
+
+.part-buttons label {
+  line-height: 27.5px;
+  align-items: center;
+}
+
+label, .colors {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; 
+  color: var(--Green, #3B755F);
+  text-align: center;
+  font-family: Cabin;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+label span:first-of-type {
+  display: inline-block;
+  line-height:17px;
+    
+
+}
+
+input[type="radio"] {
+  display: none;
+  width: 16px; /* Ancho del cuadrado según tu SVG */
+  height: 16px; /* Altura del cuadrado según tu SVG */
+  margin-right: 5px; /* Espacio entre los cuadrados */
+  cursor: pointer;
+}
+
+.color-square {
+  height: 16px;
+  width: 16px;
+}
+
+/* Estilo para las etiquetas de label que simulan los cuadrados */
+.radio-label {
+  display: inline-block;
+  width: 16px; /* Ancho del cuadrado según tu SVG */
+  height: 16px; /* Altura del cuadrado según tu SVG */ /* Color del cuadrado según tu SVG */ /* Borde del cuadrado según tu SVG */
+  cursor: pointer;
+}
+
+.radio-label:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para cambiar el color del cuadrado cuando está seleccionado */
+input[type="radio"]:checked + .radio-label {
+  border: 2px solid #B0B0B0; /* Cambia esto según tu SVG */
+  box-sizing: border-box;
+}
+
+.toggle {
+  height: 27.5px;
+  line-height: 27.5px;
+}
+
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle-container::before {
+  content: url('../../../assets/toggle/vanilla.svg');
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0; 
+}
+
+.toggle-container:hover::before {
+  content: url('../../../assets/toggle/hover.svg');
+  transition: content 0.3s ease;
+}
+
+input[type="checkbox"]:checked  ~ .toggle-container::before {
+  content: url('../../../assets/toggle/active.svg');
+  transition: content 0.3s ease;
+}
